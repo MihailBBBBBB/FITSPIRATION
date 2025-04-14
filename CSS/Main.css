@@ -3,8 +3,10 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    bottom: 0;
     background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
     color: #333;
+    overflow-x: hidden;
 }
 
 .header {
@@ -167,7 +169,7 @@ h3 {
     backdrop-filter: blur(10px);
     box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
     padding: 40px 20px 20px;
-    margin-top: 50px;
+    margin-top: 0;
     color: #333;
     font-family: 'Arial', sans-serif;
 }
@@ -212,4 +214,59 @@ h3 {
     border-top: 1px solid #ddd;
     font-size: 0.9rem;
     color: #777;
+}
+
+.layout {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.sidebar {
+    position: fixed;
+    width: 140px;
+    height: 100vh;
+    right: 30px;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    top: 80px;
+    left: 0;
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+}
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 12px 0;
+    transition: color 0.2s ease;
+}
+
+.sidebar a:hover {
+    color: #007bff;
+}
+
+.sidebar i {
+    font-size: 18px;
+}
+
+
+.main-content {
+    margin-left: 150px;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
 }

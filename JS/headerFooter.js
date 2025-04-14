@@ -46,5 +46,20 @@ class SpecialFooter extends HTMLElement {
     }
 }
 
+class SpecialAside extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#"><i class="fas fa-house"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-th-large"></i> Categories</a></li>
+                <li><a href="#"><i class="fas fa-bell"></i> Notifications</a></li>
+            </ul>
+        </aside>
+        `
+    }
+}
+
 customElements.define('special-header', SpecialHeader)
 customElements.define('special-footer', SpecialFooter)
+customElements.define('special-aside', SpecialAside)
